@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Сведенья об участниках</title>
+{% endblock %}
+
+{% block body %}
+<body>
+<h1> Сведенья об участниках </h1>
+
+
+    <div class='users_count'>
+        <h5>Количество участников: {{users_count[0]}}</h5>
+        <h5>Количество участников с открытым профилем: {{users_count[1]}}</h5>
+        <h5>Количество участников с закрытым профилем: {{users_count[2]}}</h5>
+    </div>
+    <br><br>
+
+<div>
+   <div style="float: left; width: 400px; height: 1000px;">
+    <h5>Популярные группы:</h5>
+        {% for top in top_10_group %}
+        <ul>
+        <li> {{top[0]}}, <a href="{{top[1]}}" target="_blank">{{top[1]}}</a> </li>
+        </ul>
+        {% endfor %}
+    </div>
+     <div style="float: left; width: 400px; height: 1000px;">
+    <h5>Популярные темы групп:</h5>
+        {% for group in groups %}
+        <ul>
+        <li> {{group[1]}}</li>
+        </ul>
+        {% endfor %}
+     </div>
+</div>
+
+</body>
+
+
+</body>
+
+
+
+
+{% endblock %}

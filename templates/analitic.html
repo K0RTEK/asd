@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Аналитика группы</title>
+{% endblock %}
+
+{% block body %}
+<body>
+
+    <h1> Аналитика группы </h1>
+
+    <h4> <img src="/static/images/avatar.jpg"> {{group[1]}} </h4>
+
+    <h4>Количество постов на стене группы: {{count_posts}} </h4>
+    <br><br>
+    <h5> Популярные посты:</h5>
+    {% for items in top_10 %}
+    <ul>
+    <li> <a href="{{items[0]}}" target="_blank">{{items[0]}}</a>, количество лайков: {{items[1]}} </li>
+    </ul>
+    {% endfor %}
+</body>
+{% endblock %}

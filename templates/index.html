@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Парсер ВК</title>
+{% endblock %}
+
+{% block body %}
+<br><br>
+<div style="float: left; width: 200px; height: 1000px;"></div>
+<div style="float: left; width: 500px; height: 1000px;">
+    <h2> Введите ID группы</h2>
+    <form action="/" method = "post" >
+
+        <input type="text" name="id" placeholder="https://vk.com/"  required />
+        <br><br>
+        <button class="btn btn-outline-dark me-2 rounded-pill px-3" type="submit" value="Submit">Ввести</button>
+    </form>
+</div>
+
+<div style="float: left; width: 800px; height: 1000px;">
+     <h2> Введённая ссылка:</h2> <p>{{id}}</p>
+</div>
+
+
+{% endblock %}
+

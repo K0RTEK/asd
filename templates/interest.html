@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+<head>
+    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css"/>
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+</head>
+{% block title %}
+<title>Интересы участников</title>
+{% endblock %}
+
+{% block body %}
+
+    {% for interests in interests %}
+        <div class='interests'>
+            <p>{{ interests[0] }} - {{ interests[1] }}<p>
+        </div>
+    {% endfor %}
+
+
+{% endblock %}
